@@ -36,7 +36,7 @@ class CompanyController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param App\Http\Requests\CompanyRequest $request
+     * @param \App\Http\Requests\CompanyRequest $request
      * @return \Illuminate\Http\Response
      */
     public function store(CompanyRequest $request)
@@ -81,26 +81,19 @@ class CompanyController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param \App\Http\Requests\CompanyRequest $request
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CompanyRequest $request, $id)
     {
         $request->validated();
-        $company = new Company([
-            'name' => $request->get('name'),
-            'email' => $request->get('email'),
-            'website' => $request->get('website'),
-            'logo' => FileUpload::store($request->logo)
-        ]);
-        $company->save();
 
         $company = Company::find($id);
         $company->name = $request->get('name');
         $company->email = $request->get('email');
         $company->website = $request->get('website');
-        if($request->logo->isValid()){
+        if($request->logo != null && $request->logo->isValid()){
             $company->logo = FileUpload::store($request->logo);
         }
         $company->save();
