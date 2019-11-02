@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Company;
 use App\Employee;
+use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -16,6 +17,6 @@ class HomeController extends Controller
     {
         $companyTotal = Company::count();
         $employeeTotal = Employee::count();
-        return view('home', compact('companyTotal', 'employeeTotal'));
+        return view('dashboard', compact('companyTotal', 'employeeTotal'));
     }
 }
