@@ -15,6 +15,11 @@
                     {{ session()->get('success') }}
                 </div><br/>
             @endif
+            @if(session()->get('error'))
+                <div class="alert alert-danger">
+                    {{ session()->get('error') }}
+                </div><br/>
+            @endif
         </div>
     </div>
 
@@ -94,12 +99,19 @@
                                     <td>{{$company->website}}</td>
                                     <td>
                                         <div class="row">
-                                        <a href="{{ route('company.edit',$company->id)}}" class="btn btn-primary">Edit</a>
-                                        <form action="{{ route('company.destroy', $company->id)}}" method="post">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger" type="submit">Delete</button>
-                                        </form>
+                                            <a href="{{ route('company.show',$company->id)}}" class="btn btn-default">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                            <a href="{{ route('company.edit',$company->id)}}" class="btn btn-default">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </a>
+                                            <form action="{{ route('company.destroy', $company->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger" type="submit">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
@@ -129,29 +141,22 @@
                                 <li class="paginate_button page-item previous disabled" id="example1_previous"><a
                                         href="#" aria-controls="example1" data-dt-idx="0" tabindex="0"
                                         class="page-link">Previous</a></li>
-                                <li class="paginate_button page-item active"><a href="#" aria-controls="example1"
-                                                                                data-dt-idx="1" tabindex="0"
-                                                                                class="page-link">1</a></li>
-                                <li class="paginate_button page-item "><a href="#" aria-controls="example1"
-                                                                          data-dt-idx="2" tabindex="0"
-                                                                          class="page-link">2</a></li>
-                                <li class="paginate_button page-item "><a href="#" aria-controls="example1"
-                                                                          data-dt-idx="3" tabindex="0"
-                                                                          class="page-link">3</a></li>
-                                <li class="paginate_button page-item "><a href="#" aria-controls="example1"
-                                                                          data-dt-idx="4" tabindex="0"
-                                                                          class="page-link">4</a></li>
-                                <li class="paginate_button page-item "><a href="#" aria-controls="example1"
-                                                                          data-dt-idx="5" tabindex="0"
-                                                                          class="page-link">5</a></li>
-                                <li class="paginate_button page-item "><a href="#" aria-controls="example1"
-                                                                          data-dt-idx="6" tabindex="0"
-                                                                          class="page-link">6</a></li>
-                                <li class="paginate_button page-item next" id="example1_next"><a href="#"
-                                                                                                 aria-controls="example1"
-                                                                                                 data-dt-idx="7"
-                                                                                                 tabindex="0"
-                                                                                                 class="page-link">Next</a>
+                                <li class="paginate_button page-item active">
+                                    <a href="#" aria-controls="example1" data-dt-idx="1" tabindex="0" class="page-link">
+                                        1
+                                    </a></li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" aria-controls="example1" data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" aria-controls="example1" data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" aria-controls="example1" data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" aria-controls="example1" data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
+                                <li class="paginate_button page-item ">
+                                    <a href="#" aria-controls="example1" data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
+                                <li class="paginate_button page-item next" id="example1_next">
+                                    <a href="#" aria-controls="example1" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
                                 </li>
                             </ul>
                         </div>

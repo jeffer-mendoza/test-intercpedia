@@ -24,30 +24,30 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form method="post" action="{{ route('company.update', $company->id) }}">
+        <form method="post" action="{{ route('company.update', $company->id) }}"  enctype="multipart/form-data">
             @method('PATCH')
             @csrf
             <div class="card-body">
                 <div class="form-group">
                     <label for="name">Name*</label>
-                    <input type="text" class="form-control" name="company_name" value="{{ $company->name }}" id="name"
+                    <input type="text" class="form-control" name="name" value="{{ $company->name }}" id="name"
                            placeholder="Enter name">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="company_email" value="{{ $company->email }}"
+                    <input type="email" class="form-control" name="email" value="{{ $company->email }}"
                            id="email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="website">Website</label>
-                    <input type="text" class="form-control" name="company_website" value="{{ $company->website }}"
+                    <input type="text" class="form-control" name="website" value="{{ $company->website }}"
                            id="website" placeholder="Enter website">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">Logo</label>
                     <div class="input-group">
                         <div class="custom-file">
-                            <input type="file" name="company_logo" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" name="logo" class="custom-file-input" id="exampleInputFile">
                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                         </div>
                         <div class="input-group-append">

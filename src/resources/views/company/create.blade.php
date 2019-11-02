@@ -24,26 +24,26 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form method="post" action="{{ route('company.store') }}">
+        <form method="post" action="{{ route('company.store') }}"  enctype="multipart/form-data">
             @csrf
             <div class="card-body">
                 <div class="form-group">
                     <label for="name">Name*</label>
-                    <input type="text" class="form-control" name="company_name" id="name" placeholder="Enter name" required>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" name="company_email" id="email" placeholder="Enter email">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="website">Website</label>
-                    <input type="text" class="form-control" name="company_website" id="website" placeholder="Enter website">
+                    <input type="text" class="form-control" name="website" id="website" placeholder="Enter website">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">Logo</label>
                     <div class="input-group">
                         <div class="custom-file">
-                            <input type="file" name="company_logo" class="custom-file-input" id="exampleInputFile">
+                            <input type="file" name="logo" class="custom-file-input" id="exampleInputFile">
                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                         </div>
                         <div class="input-group-append">
