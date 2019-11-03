@@ -6,7 +6,6 @@ use App\Http\Helpers\FileUpload;
 use App\Http\Requests\CompanyRequest;
 use App\Company;
 
-
 class CompanyController extends Controller
 {
 
@@ -57,7 +56,18 @@ class CompanyController extends Controller
             'website' => $request->get('website'),
             'logo' => FileUpload::store($request->logo)
         ]);
-        $company->save();
+        //$company->save();
+        //Enviar la notificación de creación
+        \Mail::send('email.message', array(), function($message) use ($request) {
+            //receptor
+            $message->to('mendosajefferson@gmail.com', 'jefferson');
+
+            //asunto
+            $message->subject("Creation Confirmation");
+
+            //remitente
+            $message->from('postmaster@sandbox40843adf1b184ca089803cfdfb4557ba.mailgun.org');
+        });
         return redirect('/company')->with('success', 'Company has been added');
     }
 
