@@ -20,7 +20,7 @@ class FileUpload
         }
         try {
             $filename = substr(str_shuffle(FileUpload::PERMITTED_CHAR), 0, 10) . '.' . $file->getClientOriginalExtension();
-            $file->storeAs('public', $filename);
+            $file->storeAs('', $filename);
             return $filename;
         } catch (\Exception $ex){
             return 'none';
