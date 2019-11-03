@@ -4,12 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Http\Helpers\FileUpload;
 use App\Http\Requests\CompanyRequest;
-use Illuminate\Http\Request;
 use App\Company;
 
 
 class CompanyController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     /**
      * Display a listing of the resource.
