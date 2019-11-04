@@ -1,39 +1,39 @@
 <?php
 
 return [
-    'title' => 'Company',
+    'title' => 'Compañia',
     'fields' => [
         'id' => 'Id',
-        'name' => 'Name',
+        'name' => 'Nombre',
         'email' => 'Email',
-        'website' => 'Website',
-        'action' => 'Action',
+        'website' => 'Sitio Web',
+        'action' => 'Acciones',
         'logo' => 'Logo'
     ],
     'placeholder' => [
-        'name' => 'Enter Company Name',
-        'email' => 'Enter Company Email',
-        'website' => 'Enter Company Website',
-        'action' => 'Action',
+        'name' => 'Ingrese el nombre de la compañía',
+        'email' => 'Ingrese el email de la compañía',
+        'website' => 'Ingrese el sitio web de la compañía',
+        'action' => 'acciones',
     ],
     'list' => [
-        'title' => 'List',
-        'breadcrumb' => 'Companies'
+        'title' => 'Lista',
+        'breadcrumb' => 'Compañias'
     ],
     'create' => [
-        'title' => 'Create',
-        'breadcrumb' => 'Create Company'
+        'title' => 'Creación',
+        'breadcrumb' => 'Crear compañía'
     ],
     'edit' => [
         'title' => 'Edit',
-        'breadcrumb' => 'Edit Company'
+        'breadcrumb' => 'Editar Companía'
     ],
     'show' => [
-        'breadcrumb' => 'Show Company'
+        'breadcrumb' => 'Mostar Compañía'
     ],
     'messages' => [
-        'create' => 'Company has been added',
-        'update' => 'Company has been updated',
-        'delete' => 'Company has been deleted Successfully'
+        'create' => 'La companía ha sido agregada',
+        'update' => 'La companía ha sido actualizada',
+        'delete' => 'La companía ha sido eliminada exitosamente'
     ]
 ];

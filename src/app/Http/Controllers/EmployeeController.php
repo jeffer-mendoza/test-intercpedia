@@ -16,6 +16,7 @@ class EmployeeController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('language');
     }
 
     /**
@@ -57,7 +58,7 @@ class EmployeeController extends Controller
             'email' => $request->get('email')
         ]);
         $employee->save();
-        return redirect('/employee')->with('success', 'Employee has been added');
+        return redirect('/employee')->with('success', __('company.messages.create'));
     }
 
     /**
@@ -105,7 +106,7 @@ class EmployeeController extends Controller
         $employee->company = $request->get('company');
         $employee->save();
 
-        return redirect('/employee')->with('success', 'Employee has been updated');
+        return redirect('/employee')->with('success', __('company.messages.update'));
 
     }
 
@@ -120,6 +121,6 @@ class EmployeeController extends Controller
         $employee = Employee::find($id);
         $employee->delete();
 
-        return redirect('/employee')->with('success', 'Employee has been deleted Successfully');
+        return redirect('/employee')->with('success', __('employee.messages.delete'));
     }
 }

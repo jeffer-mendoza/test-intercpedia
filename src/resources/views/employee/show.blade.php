@@ -1,10 +1,11 @@
 @extends('layouts.admin')
 
-@section('title')Employee @endsection
+@section('title'){{__('employee.title')}}@endsection
 
 @section('breadcrumb')
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active">Show Employee</li>
+    <li class="breadcrumb-item"><a href="/">{{__('dashboard.breadcrumb.title')}}</a></li>
+    <li class="breadcrumb-item"><a href="/employee">{{__('employee.list.breadcrumb')}}</a></li>
+    <li class="breadcrumb-item active">{{__('employee.show.breadcrumb')}}</li>
 @endsection
 
 
@@ -25,27 +26,27 @@
         <!-- /.card-header -->
         <table class="table table-striped table-bordered">
             <tr>
-                <th>ID</th>
+                <th>{{__('employee.fields.id')}}</th>
                 <td>{{$employee->id}}</td>
             </tr>
             <tr>
-                <th>Firstname</th>
+                <th>{{__('employee.fields.firstname')}}</th>
                 <td>{{$employee->firstname}}</td>
             </tr>
             <tr>
-                <th>Lastname</th>
+                <th>{{__('employee.fields.lastname')}}</th>
                 <td>{{$employee->lastname}}</td>
             </tr>
             <tr>
-                <th>Company</th>
+                <th>{{__('employee.fields.company')}}</th>
                 <td>{{$employee->company()->first()->name}}</td>
             </tr>
             <tr>
-                <th>Email</th>
+                <th>{{__('employee.fields.email')}}</th>
                 <td>{{$employee->email}}</td>
             </tr>
             <tr>
-                <th>Phone</th>
+                <th>{{__('employee.fields.phone')}}</th>
                 <td>{{$employee->phone}}</td>
             </tr>
         </table>

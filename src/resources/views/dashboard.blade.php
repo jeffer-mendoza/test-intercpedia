@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 
-@section('title') Dashboard @endsection
+@section('title'){{ __('dashboard.title')}} @endsection
 
 @section('breadcrumb')
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active">Dashboard</li>
+    <li class="breadcrumb-item"><a href="#">{{ __('message.home') }}</a></li>
+    <li class="breadcrumb-item active"> {{ __('dashboard.breadcrumb.title')}} </li>
 @endsection
 
 @section('content')
@@ -15,12 +15,13 @@
                 <div class="inner">
                     <h3>{{$companyTotal}}</h3>
 
-                    <p>Companies</p>
+                    <p>{{ __('dashboard.company') }}</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-building"></i>
                 </div>
-                <a href="/company" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/company" class="small-box-footer"> {{ __('dashboard.link') }}
+                    <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -30,12 +31,13 @@
                 <div class="inner">
                     <h3>{{$employeeTotal}}</h3>
 
-                    <p>Employees</p>
+                    <p>{{ __('dashboard.employee') }}</p>
                 </div>
                 <div class="icon">
                     <i class="fas fa-users"></i>
                 </div>
-                <a href="/employee" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a href="/employee" class="small-box-footer">{{ __('dashboard.link') }}
+                    <i class="fas fa-arrow-circle-right"></i></a>
             </div>
         </div>
     </div>

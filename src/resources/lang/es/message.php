@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'language' => 'ES',
     'home' => 'Home',
     'actions' => [
         'title' => 'Actions',

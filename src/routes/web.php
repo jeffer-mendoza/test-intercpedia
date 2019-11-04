@@ -14,9 +14,6 @@
 Auth::routes();
 Auth::routes(['register' => false]);
 Route::get('/', 'DashboardController@index')->name('dashboard');
+Route::get('/dashboard/{locale?}', 'DashboardController@locale')->name('locale');
 Route::resource('company', 'CompanyController');
 Route::resource('employee', 'EmployeeController');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

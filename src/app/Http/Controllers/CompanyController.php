@@ -18,6 +18,7 @@ class CompanyController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('language');
     }
 
     /**
@@ -58,7 +59,7 @@ class CompanyController extends Controller
             'logo' => FileUpload::store($request->logo)
         ]);
         $company->save();
-        return redirect('/company')->with('success', 'Company has been added');
+        return redirect('/company')->with('success', __('company.messages.create'));
     }
 
     /**
@@ -107,7 +108,7 @@ class CompanyController extends Controller
         }
         $company->save();
 
-        return redirect('/company')->with('success', 'Company has been updated');
+        return redirect('/company')->with('success', __('company.messages.update'));
     }
 
     /**
@@ -121,6 +122,6 @@ class CompanyController extends Controller
         $company = Company::find($id);
         $company->delete();
 
-        return redirect('/company')->with('success', 'Company has been deleted Successfully');
+        return redirect('/company')->with('success', __('company.messages.delete'));
     }
 }

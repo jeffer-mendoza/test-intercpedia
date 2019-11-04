@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 
-@section('title')Company @endsection
+@section('title'){{__('company.title')}} @endsection
 
 @section('breadcrumb')
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active">Companies</li>
+    <li class="breadcrumb-item"><a href="/">{{__('dashboard.breadcrumb.title')}}</a></li>
+    <li class="breadcrumb-item active">{{__('company.list.breadcrumb')}}</li>
 @endsection
 
 @section('content')
@@ -25,14 +25,14 @@
 
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">List</h3>
+            <h3 class="card-title">{{__('company.list.title')}}</h3>
         </div>
 
         <!-- /.card-header -->
         <div class="card-body">
             <div class="row">
                 <div class="col-12 text-right">
-                    <a class="btn btn-primary" href="/company/create">Create</a>
+                    <a class="btn btn-primary" href="/company/create">{{__('message.actions.create')}}</a>
                 </div>
             </div>
             <br/>
@@ -45,24 +45,24 @@
                             <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-sort="ascending"
                                 aria-label="Rendering engine: activate to sort column descending"
-                                style="width: 5%;">Id
+                                style="width: 5%;">{{__('company.fields.id')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Browser: activate to sort column ascending" style="width: 342px;">
-                                Name
+                                {{__('company.fields.name')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Platform(s): activate to sort column ascending" style="width: 305px;">
-                                Email
+                                {{__('company.fields.email')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Engine version: activate to sort column ascending"
                                 style="width: 231px;">
-                                Website
+                                {{__('company.fields.website')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="2"
                                 aria-label="CSS grade: activate to sort column ascending" style="width: 10%;">
-                                Action
+                                {{__('message.actions.title')}}
                             </th>
                         </tr>
                         </thead>
@@ -95,11 +95,11 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th rowspan="1" colspan="1">Id</th>
-                            <th rowspan="1" colspan="1">Name</th>
-                            <th rowspan="1" colspan="1">Email</th>
-                            <th rowspan="1" colspan="1">Website</th>
-                            <th rowspan="1" colspan="2">Actions</th>
+                            <th rowspan="1" colspan="1">{{__('company.fields.id')}}</th>
+                            <th rowspan="1" colspan="1">{{__('company.fields.name')}}</th>
+                            <th rowspan="1" colspan="1">{{__('company.fields.email')}}</th>
+                            <th rowspan="1" colspan="1">{{__('company.fields.website')}}</th>
+                            <th rowspan="1" colspan="2">{{__('message.actions.title')}}</th>
                         </tr>
                         </tfoot>
                     </table>

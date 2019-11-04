@@ -3,11 +3,11 @@
 return [
 
     'title' => 'Dashboard',
-    'company' =>'Companies',
-    'employee' =>'Employees',
-    'link' => 'More info',
+    'company' =>'Compañías',
+    'employee' =>'Empleados',
+    'link' => 'Más Información',
     'breadcrumb' => array(
-        'title' => 'Home'
+        'title' => 'Inicio'
     )
 
 ];

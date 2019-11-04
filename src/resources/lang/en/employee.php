@@ -1,32 +1,42 @@
 <?php
 
 return [
-    'title' => 'Company',
+    'title' => 'Employee',
     'fields' => [
         'id' => 'Id',
-        'name' => 'Name',
+        'firstname' => 'Firstname',
+        'lastname' => 'Lastname',
         'email' => 'Email',
-        'website' => 'Website',
-        'action' => 'Action',
-        'logo' => 'Logo'
+        'actions' => 'Actions',
+        'phone' => 'Phone',
+        'company' => 'Company',
+    ],
+    'placeholder' => [
+        'firstname' => 'Enter Employee Firstname',
+        'lastname' => 'Enter Employee Lastname',
+        'email' => 'Enter Employee Email',
+        'actions' => 'Actions',
+        'phone' => 'Enter Employee Phone',
+        'selectCompany' => 'Choose a Company...',
     ],
     'list' => [
         'title' => 'List',
-        'breadcrumb' => 'Companies'
+        'breadcrumb' => 'Employees'
     ],
     'create' => [
         'title' => 'Create',
-        'breadcrumb' => 'Create Company'
+        'breadcrumb' => 'Create Employee'
     ],
     'edit' => [
         'title' => 'Edit',
-        'breadcrumb' => 'Edit Company'
+        'breadcrumb' => 'Edit Employee'
     ],
     'show' => [
-        'breadcrumb' => 'Show Company'
+        'breadcrumb' => 'Show Employe'
     ],
     'messages' => [
-        'create' => 'Company has been added',
-        'update' => 'Company has been updated'
+        'create' => 'Employee has been added',
+        'update' => 'Employee has been updated',
+        'delete' => 'Employee has been deleted Successfully'
     ]
 ];

@@ -1,42 +1,42 @@
 <?php
 
 return [
-    'title' => 'Employee',
+    'title' => 'Empleado',
     'fields' => [
         'id' => 'Id',
-        'firstname' => 'Firstname',
-        'lastname' => 'Lastname',
+        'firstname' => 'Nombres',
+        'lastname' => 'Apellidos',
         'email' => 'Email',
-        'actions' => 'Actions',
-        'phone' => 'Phone',
-        'company' => 'Company',
+        'actions' => 'Acciones',
+        'phone' => 'Teléfono',
+        'company' => 'Compañía',
     ],
     'placeholder' => [
-        'firstname' => 'Enter Employee Firstname',
-        'lastname' => 'Enter Employee Lastname',
-        'email' => 'Enter Employee Email',
-        'actions' => 'Actions',
-        'phone' => 'Enter Employee Phone',
-        'selectCompany' => 'Choose a Company...',
+        'firstname' => 'Ingrese los nombres del empleado',
+        'lastname' => 'Ingrese los apellidos del empleado',
+        'email' => 'Ingrese el email del empleado',
+        'actions' => 'Acciones',
+        'phone' => 'Ingrese el número de teléfono del empleado',
+        'selectCompany' => 'Seleccione una compañía...',
     ],
     'list' => [
-        'title' => 'List',
-        'breadcrumb' => 'Employees'
+        'title' => 'Lista',
+        'breadcrumb' => 'Empleados'
     ],
     'create' => [
         'title' => 'Create',
-        'breadcrumb' => 'Create Employee'
+        'breadcrumb' => 'Crear Empleado'
     ],
     'edit' => [
         'title' => 'Edit',
-        'breadcrumb' => 'Edit Employee'
+        'breadcrumb' => 'Editar Empleado'
     ],
     'show' => [
-        'breadcrumb' => 'Show Employe'
+        'breadcrumb' => 'Mostar Empleado'
     ],
     'messages' => [
-        'create' => 'Employee has been added',
-        'update' => 'Employee has been updated',
-        'delete' => 'Employee has been deleted Successfully'
+        'create' => 'El empleado ha sido agregado',
+        'update' => 'El empleado ha sido actualizado',
+        'delete' => 'El empleado ha sido eliminado exitosamente'
     ]
 ];

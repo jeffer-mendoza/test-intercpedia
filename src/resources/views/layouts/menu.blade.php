@@ -1,5 +1,5 @@
 <!-- Brand Logo -->
-<a href="index3.html" class="brand-link">
+<a href="/" class="brand-link">
     <img src="/adminlte/img/logo_interacpedia.svg" alt="Intercpedia Logo" class="brand-image"
          style="opacity: .8">
     <br/>
@@ -40,8 +40,8 @@
                             <a href="/" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
-                                    Dashboard
-                                    <span class="right badge badge-danger">New</span>
+                                    {{__('menu.dashboard.item')}}
+                                    <span class="right badge badge-danger">{{__('menu.dashboard.new')}}</span>
                                 </p>
                             </a>
                         </li>
@@ -52,7 +52,7 @@
                             <a href="/company" class="nav-link">
                                 <i class="nav-icon fas fa-building"></i>
                                 <p>
-                                    Company
+                                    {{__('menu.company.item')}}
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -60,13 +60,13 @@
                                 <li class="nav-item">
                                     <a href="/company" class="nav-link active">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>List</p>
+                                        <p>{{__('menu.company.list')}}</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/company/create" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Create</p>
+                                        <p>{{__('menu.company.create')}}</p>
                                     </a>
                                 </li>
                             </ul>
@@ -76,7 +76,7 @@
                             <a href="/employee" class="nav-link">
                                 <i class="nav-icon fas fa-users"></i>
                                 <p>
-                                    Employees
+                                    {{__('menu.employee.item')}}
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
@@ -84,13 +84,13 @@
                                 <li class="nav-item">
                                     <a href="/employee" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>List</p>
+                                        <p>{{ __('menu.company.list')}}</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="/employee/create" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Create</p>
+                                        <p>{{__('menu.company.create')}}</p>
                                     </a>
                                 </li>
                             </ul>

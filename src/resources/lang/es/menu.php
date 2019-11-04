@@ -3,16 +3,16 @@
 return [
     'dashboard' => [
       'item' => 'Dashboard',
-      'new' => 'new'
+      'new' => 'nuevo'
     ],
     'company' => [
-      'item' => 'Company',
-      'list' => 'List',
-      'create' => 'Create'
+      'item' => 'Compañías',
+      'list' => 'Lista',
+      'create' => 'Crear'
     ],
     'employee' => [
-      'item' => 'Employee',
-      'list' => 'List',
-      'create' => 'Create'
+      'item' => 'Empleados',
+      'list' => 'Lista',
+      'create' => 'Crear'
     ],
 ];

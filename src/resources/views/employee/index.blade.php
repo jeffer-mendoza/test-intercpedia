@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 
-@section('title')Employee @endsection
+@section('title'){{__('employee.title')}}@endsection
 
 @section('breadcrumb')
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active">Employees</li>
+    <li class="breadcrumb-item"><a href="/">{{__('dashboard.breadcrumb.title')}}</a></li>
+    <li class="breadcrumb-item active">{{__('employee.list.breadcrumb')}}</li>
 @endsection
 
 @section('content')
@@ -25,14 +25,14 @@
 
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">List</h3>
+            <h3 class="card-title">{{__('employee.list.title')}}</h3>
         </div>
 
         <!-- /.card-header -->
         <div class="card-body">
             <div class="row">
                 <div class="col-12 text-right">
-                    <a class="btn btn-primary" href="/employee/create">Create</a>
+                    <a class="btn btn-primary" href="/employee/create">{{__('message.actions.create')}}</a>
                 </div>
             </div>
             <br/>
@@ -45,34 +45,35 @@
                             <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-sort="ascending"
                                 aria-label="Rendering engine: activate to sort column descending"
-                                style="width: 5%;">Id
+                                style="width: 5%;">
+                                {{__('employee.fields.id')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Browser: activate to sort column ascending" style="width: 342px;">
-                                Firstname
+                                {{__('employee.fields.firstname')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Platform(s): activate to sort column ascending" style="width: 305px;">
-                                Lastname
+                                {{__('employee.fields.lastname')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Engine version: activate to sort column ascending"
                                 style="width: 231px;">
-                                Company
+                                {{__('employee.fields.company')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Engine version: activate to sort column ascending"
                                 style="width: 231px;">
-                                Email
+                                {{__('employee.fields.email')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                                 aria-label="Engine version: activate to sort column ascending"
                                 style="width: 231px;">
-                                Phone
+                                {{__('employee.fields.phone')}}
                             </th>
                             <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="2"
                                 aria-label="CSS grade: activate to sort column ascending" style="width: 10%;">
-                                Action
+                                {{__('employee.fields.actions')}}
                             </th>
                         </tr>
                         </thead>
@@ -108,13 +109,13 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th rowspan="1" colspan="1">Id</th>
-                            <th rowspan="1" colspan="1">Firstname</th>
-                            <th rowspan="1" colspan="1">Lastname</th>
-                            <th rowspan="1" colspan="1">Company</th>
-                            <th rowspan="1" colspan="1">Email</th>
-                            <th rowspan="1" colspan="1">Phone</th>
-                            <th rowspan="1" colspan="2">Actions</th>
+                            <th rowspan="1" colspan="1">{{__('employee.fields.id')}}</th>
+                            <th rowspan="1" colspan="1">{{__('employee.fields.firstname')}}</th>
+                            <th rowspan="1" colspan="1">{{__('employee.fields.lastname')}}</th>
+                            <th rowspan="1" colspan="1">{{__('employee.fields.company')}}</th>
+                            <th rowspan="1" colspan="1">{{__('employee.fields.email')}}</th>
+                            <th rowspan="1" colspan="1">{{__('employee.fields.phone')}}</th>
+                            <th rowspan="1" colspan="2">{{__('employee.fields.actions')}}</th>
                         </tr>
                         </tfoot>
                     </table>
@@ -122,8 +123,8 @@
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-5">
-                    <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">Showing 1 to 10
-                        of 57 entries
+                    <div class="dataTables_info" id="example1_info" role="status" aria-live="polite">
+                        Showing 1 to 10 of 57 entries
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-7">

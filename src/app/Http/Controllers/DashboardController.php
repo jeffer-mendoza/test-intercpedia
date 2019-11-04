@@ -16,6 +16,7 @@ class DashboardController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('language');
     }
 
     /**
@@ -28,5 +29,14 @@ class DashboardController extends Controller
         $companyTotal = Company::count();
         $employeeTotal = Employee::count();
         return view('dashboard', compact('companyTotal', 'employeeTotal'));
+    }
+
+    /**
+     * Change locale
+     */
+    public function locale($locale = 'en')
+    {
+        \Session::put('locale',$locale);
+        return redirect()->back();
     }
 }

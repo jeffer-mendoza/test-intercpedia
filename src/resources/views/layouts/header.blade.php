@@ -6,13 +6,13 @@
             <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/" class="nav-link">Dashboard</a>
+            <a href="/" class="nav-link">{{__('menu.dashboard.item')}}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/company" class="nav-link">Company</a>
+            <a href="/company" class="nav-link">{{__('menu.company.item')}}</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="/employee" class="nav-link">Employee</a>
+            <a href="/employee" class="nav-link">{{__('menu.employee.item')}}</a>
         </li>
     </ul>
     <!-- SEARCH FORM -->
@@ -26,6 +26,23 @@
             </div>
         </div>
     </form>
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false" v-pre>
+                {{ __('message.language') }} <span class="caret"></span>
+            </a>
+
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{{ route('locale', 'en') }}">
+                    EN
+                </a>
+                <a class="dropdown-item" href="{{ route('locale', 'es') }}">
+                    ES
+                </a>
+            </div>
+        </li>
+    </ul>
     <!-- Right Side Of Navbar -->
     <ul class="navbar-nav ml-auto">
         <!-- Authentication Links -->

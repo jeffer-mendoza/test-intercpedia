@@ -1,10 +1,11 @@
 @extends('layouts.admin')
 
-@section('title')Company @endsection
+@section('title'){{__('company.title')}} @endsection
 
 @section('breadcrumb')
-    <li class="breadcrumb-item"><a href="#">Home</a></li>
-    <li class="breadcrumb-item active">Show Company</li>
+    <li class="breadcrumb-item"><a href="/">{{__('dashboard.breadcrumb.title')}}</a></li>
+    <li class="breadcrumb-item"><a href="/company">{{__('company.list.breadcrumb')}}</a></li>
+    <li class="breadcrumb-item active">{{__('company.show.breadcrumb')}}</li>
 @endsection
 
 
